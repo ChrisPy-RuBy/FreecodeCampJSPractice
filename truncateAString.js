@@ -1,7 +1,15 @@
 function truncateString(str, num) {
   var spread = "...";
-  var trimedArray = str.slice(0, num-3).concat(spread);
-  console.log(trimedArray);
+  var trimedArray;
+  if (num >= str.length) {
+    return str;
+  } else if (num >= 3) {
+    trimedArray = str.slice(0, num-3).concat(spread);
+  }
+  else {
+    trimedArray = str.slice(0, num).concat(spread);
+  }
+  return trimedArray;
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 11);
