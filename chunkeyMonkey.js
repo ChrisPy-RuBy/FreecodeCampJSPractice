@@ -1,16 +1,11 @@
 function chunkArrayInGroups(arr, size) {
   var subArr = [];
   var clipValue = 0;
-  for (var i = 0; i > arr.length; ) {
-    if (i >= size) {
-      clipValue = i+size;
-    } else {
-      clipValue = arr.length;
-    }
-    subArr.push(arr.slice(clipValue, i));
-    i = clipValue;
-}
-  console.log (subArr.reverse());
+  for (var i = 0; i < arr.length;) {
+    subArr.push(arr.slice(i, i+size));
+    i += size;
+  }
+  console.log(subArr);
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
