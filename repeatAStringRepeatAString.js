@@ -1,12 +1,12 @@
 function repeatStringNumTimes(str, num) {
-  var newString = ""
+  var newString = ""; 
   for (var i = 0; i < num; i++) {
-    newString += str
+    newString += str;
   }
-  console.log (newString)
+  return newString;
 }
 
 
 
-repeatStringNumTimes("abc", 5)
-repeatStringNumTimes("abc", 0)
+repeatStringNumTimes("abc", 5);
+repeatStringNumTimes("abc", 0);
